@@ -1,0 +1,14 @@
+GET http://localhost:3001/todos
+###
+
+POST http://localhost:3001/todo/new HTTP/1.1
+Content-Type: application/json 
+
+{
+"text": "Do Homework"
+}
+
+###
+DELETE http://localhost:3001/todo/delete/63eba058cf83cb5bf6113661
+###
+GET http://localhost:3001/todo/complet/63e81b5e56bd722f1ff561dc

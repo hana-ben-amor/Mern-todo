@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&family=Poppins:ital,wght@0,300;0,700;0,800;1,400&display=swap');
+:root{
+--primary:#D81E5B;
+--secondary:#8A4EFC;
+--light:#EEE;
+--light-alt:#61759b;
+--dark:#131A26;
+--dark-alt:#202B3E;
+}
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family:'Fira sans',sans-serif;
+}
+body{
+  background-color: var(--dark-alt);
+  color: var(--light);
+}
+.App{
+  padding: 32px;
+}
+h1{
+  font-size:40px;
+  margin-bottom: 32px;
+  font-weight: 700;
+}
+h4{
+  color:var(--light-alt);
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+.todo{
+  position: relative;
+  background-color: var(--dark);
+  padding:16px;
+  margin-bottom:16px;
+  border-radius: 30px;
+  transition: 0.5s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.todo:hover{
+  opacity: 0.8;
+}
+
+.todo .checkbox{
+  width: 20px;
+  height: 20px;
+  margin-right: 16px;
+  border-radius: 999px;
+  background-color: var(--dark-alt);
+  transition: 0.4s;
+
+}
+
+.todo.is-complete .checkbox{
+  background-color: var(--primary);
+  background-image:linear-gradient(to bottom,var(--primary),var(--secondary));
+}
+.todo.is-complete .text{
+  text-decoration: line-through;
+}
+.todo.text{
+  font-size:20px;
+}
+.todo .delete-todo{
+position:absolute;
+right:16px;
+top:50%;
+width: 24px;
+height:24px;
+border-radius: 50%;
+background-color:#AF1E2D;
+color:var(--light);
+transform:translateY(-50%);
+display: flex;
+cursor: pointer;
+align-items: center;
+justify-content: center;
+}
+
+.addPopUp{
+  position:fixed;
+  bottom: 32px;
+  right:32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:64px;
+  height: 64px;
+  border-radius: 999px;
+  font-size: 28px;
+  font-weight: 999;
+  color: var(--light);
+  background-image: linear-gradient(to bottom,var(--primary),var(--secondary));
+}
+
+.addPopUp:hover{
+  opacity:0.7;
+  font-size:30px;
+  background-image: linear-gradient(to bottom,var(--primary),var(--primary));
+}
+
+.popup{
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  background-color:var(--light);
+  width: 100%;
+  max-width:400px;
+  padding:32px;
+  border-radius:16px;
+  box-shadow: 0px 3px 24px var(--dark);
+}
+
+.closePopup{
+position:absolute;
+cursor: pointer;
+right:16px;
+top:20%;
+width: 20px;
+font-size:18px;
+height:20px;
+border-radius: 50%;
+background-color:#AF1E2D;
+color:var(--light);
+transform:translateY(-50%);
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.popup h3{
+  color: var(--dark);
+  margin-bottom: 20px;
+  font-weight:400;
+  text-decoration:uppercase;
+}
+
+.add-todo-input{
+  appearance:none;
+  border:none;
+  outline:none;
+  border-color: #fff;
+  padding:15px;
+  width: 100%;
+  box-shadow:0px 2px 24px rgba(0,0,0,0.2);
+  border-radius:16px;
+  font-size: 20px;
+}
+
+.button{
+  margin-top: 10px;
+  padding:16px 32px;
+  border-radius:99px;
+  display: inline-block;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align:center;
+  cursor: pointer;
+  background-image: linear-gradient(to right,var(--primary),var(--secondary));
+}
